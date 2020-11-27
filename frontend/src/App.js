@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 
 const items =[
     {
@@ -41,6 +42,7 @@ const options =[
 
 function App() {
     const [selected, setSelected] = useState(options[0]);
+    const [showDropdown,SetShowDropDown] = useState(false);
   return (
     <div className="App">
             <div id="wrapper">
@@ -75,8 +77,9 @@ function App() {
                        </div>
                        <div className="row">
                            <div className="col-md-6 col-xl-3 mb-4">
-                           Questions existentielles
+                           
                                <div className="card shadow border-left-primary py-2">
+                              <h5> Questions existentielles</h5>
                                    <div className="card-body">
                                    <Accordion items ={items}/>
                                    </div>
@@ -85,18 +88,21 @@ function App() {
                            <div className="col-md-6 col-xl-3 mb-4">
                                <div className="card shadow border-left-success py-2">
                                    <div className="card-body">
+                                       <button className="btn" onClick={() => SetShowDropDown(!showDropdown)}>Afficher/Masquer</button>
+                                    { showDropdown ?
                                        <Dropdown 
                                        selected = {selected}
                                        onSelectedChange = {setSelected}
                                        options={options}
-                                       />
+                                       /> : null
+                                    }
                                    </div>
                                </div>
                            </div>
                            <div className="col-md-6 col-xl-3 mb-4">
                                <div className="card shadow border-left-info py-2">
                                    <div className="card-body">
-
+                                           
                                    </div>
                                </div>
                            </div>
@@ -120,14 +126,17 @@ function App() {
                            <div className="col-lg-5 col-xl-4">
                                <div className="card shadow mb-4">
                                    <div className="card-header d-flex justify-content-between align-items-center">
-                                       <div className="dropdown no-arrow"><button className="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                       <div className="dropdown no-arrow">
+                                       <button className="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
                                            <div className="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
                                                <p className="text-center dropdown-header">dropdown header:</p><a className="dropdown-item" role="presentation" href="#">&nbsp;Action</a><a className="dropdown-item" role="presentation" href="#">&nbsp;Another action</a>
-                                               <div className="dropdown-divider"></div><a className="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
+                                               <div className="dropdown-divider"></div>
+                                               <a className="dropdown-item" role="presentation" href="#">&nbsp;Something else here</a></div>
                                        </div>
                                    </div>
                                    <div className="card-body">
                                        <div className="text-center small mt-4"></div>
+                                       <Translate/> 
                                    </div>
                                </div>
                            </div>
