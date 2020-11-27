@@ -1,66 +1,24 @@
-// AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import Convert from './Convert';
 
 const options = [
   {
-    label: 'Anglais',
-    value: 'en',
-  },
-  {
     label: 'Afrikaans',
     value: 'af',
   },
   {
-    label: 'Allemand',
-    value: 'nl',
-  },
-  {
-    label: 'Arabe',
+    label: 'Arabic',
     value: 'ar',
-  },
-  {
-    label: 'Basque',
-    value: 'eu',
-  },
-  {
-    label: 'Catalan',
-    value: 'ca',
-  },
-  {
-    label: 'Chinois',
-    value: 'zh-TW',
-  },
-  {
-    label: 'Croate',
-    value: 'hr',
-  },
-  {
-    label: 'Espagnol',
-    value: 'es',
   },
   {
     label: 'Hindi',
     value: 'hi',
   },
   {
-    label: 'Italien',
-    value: 'it',
+    label: 'Dutch',
+    value: 'nl',
   },
-  {
-    label: 'Français',
-    value: 'fr',
-  },
-  {
-    label: 'Russe',
-    value: 'ru',
-  },
-   {
-      label: 'Xhosa',
-      value: 'xh',
-    },
- 
 ];
 
 const Translate = () => {
