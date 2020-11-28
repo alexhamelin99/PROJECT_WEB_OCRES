@@ -31,12 +31,13 @@ const Météo = () => {
     return ( 
         <div className="ui form">
             <div>
-                <label>Sélectionnez une ville</label>
+                
                 <input 
                 className="input" 
                 value={query} 
                 onChange={(e) => setQuery(e.target.value)} 
                 onKeyPress={search}
+                placeholder="Sélectionnez une ville"
                 /> 
                 {weather.main && (
                     <div className="city" >

@@ -102,6 +102,7 @@ function App() {
                            </div>
                            <div className="col-md-6 col-xl-3 mb-4">
                                <div className="card shadow border-left-info py-2">
+                                    <h4>Météo</h4>
                                    <div className="card-body">
                                            <Météo/>
                                    </div>
