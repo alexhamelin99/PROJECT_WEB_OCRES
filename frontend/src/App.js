@@ -7,6 +7,7 @@ import Search from './components/Search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
 import Météo from './components/Météo';
+import Graph from './components/Graph';
 
 const items =[
     {
@@ -111,7 +112,6 @@ function App() {
                            <div className="col-md-6 col-xl-3 mb-4">
                                <div className="card shadow border-left-warning py-2">
                                    <div className="card-body">
-
                                    </div>
                                </div>
                            </div>
@@ -119,7 +119,7 @@ function App() {
                        <div className="row">
                            <div className="col-lg-7 col-xl-8">
                                <div className="card shadow mb-4">
-                                   <div className="card-header d-flex justify-content-between align-items-center"></div>
+                                   <div className="card-header d-flex justify-content-between align-items-center">Wikipédia</div>
                                    <div className="card-body">
                                    <Search/>
                                    </div>
@@ -127,7 +127,7 @@ function App() {
                            </div>
                            <div className="col-lg-5 col-xl-4">
                                <div className="card shadow mb-4">
-                                   <div className="card-header d-flex justify-content-between align-items-center">
+                                   <div className="card-header d-flex justify-content-between align-items-center">Traduction
                                        <div className="dropdown no-arrow">
                                        <button className="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"></button>
                                            <div className="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
@@ -142,6 +142,14 @@ function App() {
                                    </div>
                                </div>
                            </div>
+                       </div>
+                       <div className="row">
+                       <div className="card shadow">
+                                   <div className="card-header d-flex justify-content-between align-items-center">Graphique du Covid en France</div>
+                                   <div className="card-body">
+                                   <Graph/>
+                                   </div>
+                               </div>
                        </div>
                    </div>
                </div>
