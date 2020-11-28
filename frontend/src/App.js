@@ -144,12 +144,14 @@ function App() {
                            </div>
                        </div>
                        <div className="row">
-                       <div className="card shadow">
-                                   <div className="card-header d-flex justify-content-between align-items-center">Graphique du Covid en France</div>
-                                   <div className="card-body">
-                                   <Graph/>
-                                   </div>
-                               </div>
+                            <div className="col-lg col-xl">
+                                <div className="card shadow">
+                                            <div className="card-header d-flex justify-content-between align-items-center">Graphique du Covid en France</div>
+                                            <div className="card-body">
+                                            <Graph/>
+                                            </div>
+                                </div>
+                            </div>
                        </div>
                    </div>
                </div>

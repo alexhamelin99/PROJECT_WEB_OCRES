@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart,
   } from 'recharts';
   import Select from 'react-select';
 
@@ -75,10 +75,11 @@ function Graph() {
             <div className="chart-wrapper">
                 {isLoading ?
                     <div>loading...</div> :
-                    <div className="content-wrap">
+                    <div className="content-wrap" style={{ width: '100%', height: '70%' }}>
+                    <ResponsiveContainer aspect={1.5}>
                     <LineChart
-                        width={800}
-                        height={500}
+                    width={800}
+                    height={500}
                         data={data}
                         margin={{
                             top: 5, right: 30, left: 20, bottom: 5,
@@ -92,6 +93,7 @@ function Graph() {
                         <Line type="monotone" dataKey={firstLabel} stroke="#8884d8" activeDot={{ r: 8 }} />
                         <Line type="monotone" dataKey={secondLable} stroke="#87d110" activeDot={{ r: 8 }} />
                     </LineChart>
+                    </ResponsiveContainer>
                     <div className="selector-wrap">
                         <Select options={options} onChange={firstInput} placeholder="FRANCE" />
                         <Select options={options} onChange={secondInput} placeholder="ITALY" />
