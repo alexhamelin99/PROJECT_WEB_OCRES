@@ -6,6 +6,7 @@ import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
+import Météo from './components/Météo';
 
 const items =[
     {
@@ -102,7 +103,7 @@ function App() {
                            <div className="col-md-6 col-xl-3 mb-4">
                                <div className="card shadow border-left-info py-2">
                                    <div className="card-body">
-                                           
+                                           <Météo/>
                                    </div>
                                </div>
                            </div>
