@@ -28,11 +28,11 @@ function Admin(){
                         <h3>Question existentielles</h3>
                                 <div className="form-group">
                                     <label for="question">Tapez votre question</label>
-                                    <input type="password" className="form-control" id="question" placeholder="Pourquoi le ciel est bleu ?"/>
+                                    <input type="text" className="form-control" id="question" placeholder="Pourquoi le ciel est bleu ?"/>
                                 </div>
                                 <div className="form-group">
                                 <label for="réponse">Tapez votre réponse</label>
-                                <input type="email" className="form-control" id="réponse"
+                                <input type="text" className="form-control" id="réponse"
                                     placeholder="C'est comme ça"/>
                                 </div>
                         </div>

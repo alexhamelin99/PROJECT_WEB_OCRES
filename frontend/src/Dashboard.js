@@ -50,7 +50,9 @@ function Dashboard(){
                                <div className="input-group"><input className="bg-light form-control border-0 small" type="text" placeholder="Search for ..."/>
                                    <div className="input-group-append"><button className="btn btn-primary py-0" type="button"><i className="fas fa-search"></i></button></div>
                                </div>
-                           </form><Link to="/Admin"><span>Admin</span></Link></div>
+                           </form>
+                           <Link to="/Admin"><span>Admin</span></Link>
+                        </div>
                    </nav>
                    <div className="container-fluid">
                        <div className="d-sm-flex justify-content-between align-items-center mb-4">
