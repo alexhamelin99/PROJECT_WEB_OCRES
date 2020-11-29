@@ -4,26 +4,47 @@ import Convert from './Convert';
 
 const options = [
   {
+    label: 'Anglais',
+    value: 'en',
+  },
+  {
+    label: 'Allemand',
+    value: 'de',
+  },
+  {
+    label: 'Chinois',
+    value: 'zh-TW',
+  },
+  {
+    label: 'Italien',
+    value: 'it',
+  },
+  {
     label: 'Afrikaans',
     value: 'af',
   },
   {
-    label: 'Arabic',
-    value: 'ar',
+    label: 'Espagnol',
+    value: 'es',
   },
   {
     label: 'Hindi',
     value: 'hi',
   },
   {
-    label: 'Dutch',
-    value: 'nl',
+    label: 'Russe',
+    value: 'ru',
   },
+  {
+    label: 'Zulu',
+    value: 'zu',
+  },
+  
 ];
 
 const Translate = () => {
   const [language, setLanguage] = useState(options[0]);
-  const [text, setText] = useState('Cette section traduit automatiquement tout texte tapé par vos soins');
+  const [text, setText] = useState('Cette section traduit automatiquement tout texte tapé');
 
   return (
     <div>
