@@ -9,6 +9,8 @@ import Translate from './components/Translate';
 import Météo from './components/Météo';
 import Graph from './components/Graph';
 
+
+
 const items =[
     {
     title:'Comment créer un Dashboard',
@@ -42,6 +44,9 @@ const options =[
 
 
 
+
+
+
 function App() {
     const [selected, setSelected] = useState(options[0]);
     const [showDropdown,SetShowDropDown] = useState(false);
@@ -51,7 +56,7 @@ function App() {
            <nav className="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
                <div className="container-fluid d-flex flex-column p-0">
                    <a className="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                       <div className="sidebar-brand-icon rotate-n-15"><i className="fas fa-laugh-wink"></i></div>
+                       
                        <div className="sidebar-brand-text mx-3"><span>ECE Paris</span></div>
                    </a>
                    <hr className="sidebar-divider my-0"/>
@@ -78,50 +83,11 @@ function App() {
                            <h3 className="text-dark mb-0">Dashboard</h3>
                        </div>
                        <div className="row">
-                           <div className="col-md-6 col-xl-3 mb-4">
-                           
-                               <div className="card shadow border-left-primary py-2">
-                              <h5> Questions existentielles</h5>
-                                   <div className="card-body">
-                                   <Accordion items ={items}/>
-                                   </div>
-                               </div>
-                           </div>
-                           <div className="col-md-6 col-xl-3 mb-4">
-                               <div className="card shadow border-left-success py-2">
-                                   <div className="card-body">
-                                       <button className="btn" onClick={() => SetShowDropDown(!showDropdown)}>Afficher/Masquer</button>
-                                    { showDropdown ?
-                                       <Dropdown 
-                                       selected = {selected}
-                                       onSelectedChange = {setSelected}
-                                       options={options}
-                                       /> : null
-                                    }
-                                   </div>
-                               </div>
-                           </div>
-                           <div className="col-md-6 col-xl-3 mb-4">
-                               <div className="card shadow border-left-info py-2">
-                                    <h4>Météo</h4>
-                                   <div className="card-body">
-                                           <Météo/>
-                                   </div>
-                               </div>
-                           </div>
-                           <div className="col-md-6 col-xl-3 mb-4">
-                               <div className="card shadow border-left-warning py-2">
-                                   <div className="card-body">
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div className="row">
                            <div className="col-lg-7 col-xl-8">
                                <div className="card shadow mb-4">
                                    <div className="card-header d-flex justify-content-between align-items-center">Wikipédia</div>
                                    <div className="card-body">
-                                   <Search/>
+                                   <Graph/>
                                    </div>
                                </div>
                            </div>
@@ -144,14 +110,53 @@ function App() {
                            </div>
                        </div>
                        <div className="row">
-                            <div className="col-lg col-xl">
-                                <div className="card shadow">
-                                            <div className="card-header d-flex justify-content-between align-items-center">Graphique du Covid en France</div>
-                                            <div className="card-body">
-                                            <Graph/>
-                                            </div>
-                                </div>
-                            </div>
+                           <div className="col-md-6 col-xl-4 mb-4">
+                           
+                               <div className="card shadow border-left-primary py-2">
+                              <h5> Questions existentielles</h5>
+                                   <div className="card-body">
+
+                                   <Accordion items ={items}/>
+                                   </div>
+                               </div>
+                           </div>
+                           <div className="col-md-6 col-xl-4 mb-4">
+                               <div className="card shadow border-left-success py-2">
+                                   <div className="card-body">
+                                       <button className="btn" onClick={() => SetShowDropDown(!showDropdown)}>Afficher/Masquer</button>
+                                    { showDropdown ?
+                                       <Dropdown 
+                                       selected = {selected}
+                                       onSelectedChange = {setSelected}
+                                       options={options}
+                                       /> : null
+                                    }
+                                   </div>
+                               </div>
+                           </div>
+                           <div className="col-md-6 col-xl-4 mb-4">
+                               <div className="card shadow border-left-info py-2">
+                                    <h4>Météo</h4>
+                                   <div className="card-body">
+                                           <Météo/>
+                                   </div>
+                               </div>
+                           </div>
+                          
+                              
+                           
+                       </div>
+                      
+                       <div className="row">
+                           <div className="col">
+                               <div className="card shadow mb-4">
+                                   <div className="card-header d-flex justify-content-between align-items-center">Wikipédia</div>
+                                   <div className="card-body">
+                                    <Search/>
+                                   </div>
+                               </div>
+                           </div>
+                          
                        </div>
                    </div>
                </div>
