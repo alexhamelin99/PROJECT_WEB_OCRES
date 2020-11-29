@@ -4,7 +4,7 @@
 
 ### Organisation du travail
 
-Afin de correctement réaliser le projet, nous avons divisé le travail avec l'outil Airtable. Vous pouver y accéder en cliquant [ici](https://airtable.com/shrr8Pf4tvyGxhPVU/tblaAcrKzqcAnqfEV)
+Afin de correctement réaliser le projet, nous avons divisé le travail avec l'outil Airtable. Vous pouver y accéder en cliquant [ici](https://airtable.com/shrr8Pf4tvyGxhPVU/tblaAcrKzqcAnqfEV).
 
 Ci-dessous un aperçu : 
 
@@ -30,7 +30,7 @@ Voici la liste des paquets **Yarn** que nous avons utilisés :
 
 Nous avons utilisé Bootstrap pour la mise en page de notre Dashboard. De ce fait, notre Dashboard est entièrement responsive.
 
-Nous avons ensuite créer nos **Widgets** (qui sont réutilisables et fonctionnelles) dans un dossier **components**.
+Nous avons ensuite créer nos **Widgets** (qui sont réutilisables et fonctionnels) dans un dossier **components**.
 
 Par la suite, il nous suffisait d'intégrer nos widgets dans la page **Dashboard.js** à l'aide de la commande **import**.
 
