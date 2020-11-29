@@ -8,7 +8,7 @@ Afin de correctement réaliser le projet, nous avons divisé le travail avec l'o
 
 Ci-dessous un aperçu : 
 
-![ImageRoadmapAirtable](Airtable.PNG)
+![](Airtable.png)
 
 ### Prototypage
 
@@ -16,42 +16,25 @@ Nous avons commencé par créer un premier design de notre Dashboard avec Figma.
 
 **Intérêts du prototypage** : Ce prototype nous a permis de définir un squelette à notre Dashboard en pensant au préalable aux différents widgets que nous allons utilisé ainsi qu'à leurs emplacements sur la page. Ceci nous a facilité le travail car, par la suite, nous n'avions plus qu'à les placer dans les espaces dédiés.
 
-![ImageProto1](proto1.PNG)
+![](proto1.png)
 
-![ImageProto2](proto2.PNG)
+![](proto2.png)
 
 ### Frontend
 
 Voici la liste des paquets **Yarn** que nous avons utilisés :
 
-- **react-router**
+- **react-router** : Nécéssaire pour créer notamment le lien entre la page Dashboard et la page Admin.
 - **axios** : Nous nous sommes servis d'Axios pour les API de nos widgets **Search** (recherche Wikipédia), **Météo**, **Graph** (Chiffres Covid-19) et **Traduction**.
-
-- **recharts** : afficher des graphiques facilement
+- **recharts** : Pour l'implémentation du graph Covid-19.
+- **react-select** : Pour le comparateur du graph Covid-19.
 - **storybook** : composants plus robustes
 
-**J'ai décidé de ne pas utiliser Bootstrap** afin d'apprendre à faire des sites responsives en CSS pur sans dépendre d'un framework.
-Pour cela, j'ai utilisé une grille CSS et des conteneurs flex.
+Nous avons utilisé Bootstrap pour la mise en page de notre Dashboard. De ce fait, notre Dashboard est entièrement responsive.
 
-J'ai commencé par créer la hiérarchie des composants à l'aide du prototype.
-Chaque composant ne contenait que son nom et une couleur de fond pour les reconnaitre et les agencer plus facilement.
+Nous avons ensuite créer nos **Widgets** (qui sont réutilisables et fonctionnelles) dans un dossier **components**.
 
-J'ai ensuite travailler le responsive en utilisant une grille CSS et des conteneurs flex:
-
-![ImageGrilleCss](grillecss.PNG)
-
-Une fois le responsive correctement réalisé, j'ai déclaré des **données bêtes** en tant que state dans App.js.
-Cela va nous faciliter la tâche lorsque nous connecterons l'API au front, je n'aurai qu'à remplacer ces données bêtes par le résultat d'une requête GET.
-
-J'ai ensuite passer en props à tout les composants enfants le state de App.js.
-
-Ensuite, j'ai utilisé react-router pour faire la page admin.
-
-Finalement, j'ai réalisé les composants individuellement.
-
-### La partie backend
-
-La partie backend sera codée en **Javascript** avec l'aide de **Node.JS** en utilisant une base de donnée **MongoDB** (Document-based).
+Par la suite, il nous suffisait d'intégrer nos widgets dans la page **Dashboard.js** à l'aide de la commande **import**.
 
 ### Comment mettre en route notre projet
 
@@ -59,19 +42,18 @@ La partie backend sera codée en **Javascript** avec l'aide de **Node.JS** en ut
 
 2) Installer les paquets nécessaires en éxécutant la commande suivante:
     ``` bash
-    npm install
+    yarn
     ``` 
-    dans **/front**
+    dans **/frontend**
 
 3) Lancer le projet en éxécutant la commande suivante:
     ``` bash
-    npm start
+    yarn start
     ``` 
-    dans **/front**
+    dans **/frontend**
 
-4) Se rendre sur [localhost](http://localhost:3000/#/)
+4) Se rendre sur [localhost](http://localhost:3000/)
 
-## Auteurs
-
-Réalisé par Robin Labrot, Arthur Saint Martin.
-OCRES ING4 2A
+## Arian CHAFA - TD2B
+## Alexandre HAMELIN - TD2A
+## ING 4 - OCRES
