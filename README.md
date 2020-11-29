@@ -12,23 +12,21 @@ Ci-dessous un aperçu :
 
 ### Prototypage
 
-En concevant dans un premier temps un design du dashboard avec l'outil Adobe XD en prenant en compte l'expérience utilisateur et appliquer un certain soin à l'UI,
-je n'avais plus qu'à reproduire en code le design réalisé.
-Les deux autres avantages du prototype étaient:
+Nous avons commencé par créer un premier design de notre Dashboard avec Figma. Nous avons tenté de le rendre le plus simple et intuitif possible. Nous avons réussi à dépasser nos attentes du prototypage lors de la phase de développement puisque le final final est légérement différent des prévisions que nous faites avec Figma.
 
-- **Découpage des composants React** : Avec le prototype, on peut visuellement découper chaque partie en composant et organiser son code dès le départ.
-- **Structure des données** : Il était plus simple d'imaginer la structure des données dont nous aurons besoin à partir du prototype
+**Intérêts du prototypage** : Ce prototype nous a permis de définir un squelette à notre Dashboard en pensant au préalable aux différents widgets que nous allons utilisé ainsi qu'à leurs emplacements sur la page. Ceci nous a facilité le travail car, par la suite, nous n'avions plus qu'à les placer dans les espaces dédiés.
 
 ![ImageProto1](proto1.PNG)
 
 ![ImageProto2](proto2.PNG)
 
-### La partie frontend
+### Frontend
 
-La partie frontend est codée grâce au framework Javascript **React.js**.
-Paquets NPM utilisées:
-- **react-router** : permet le routage 
-- **luxon** : gérer plus facilement les dates en JS
+Voici la liste des paquets **Yarn** que nous avons utilisés :
+
+- **react-router**
+- **axios** : Nous nous sommes servis d'Axios pour les API de nos widgets **Search** (recherche Wikipédia), **Météo**, **Graph** (Chiffres Covid-19) et **Traduction**.
+
 - **recharts** : afficher des graphiques facilement
 - **storybook** : composants plus robustes
 
