@@ -18,8 +18,6 @@ Nous avons commencé par créer un premier design de notre Dashboard avec Figma.
 
 ![](proto1.png)
 
-![](proto2.png)
-
 ### Frontend
 
 Voici la liste des paquets **Yarn** que nous avons utilisés :
