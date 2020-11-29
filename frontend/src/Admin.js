@@ -23,19 +23,20 @@ function Admin(){
                     <div className="d-sm-flex justify-content-between align-items-center mb-4">
                         <h3 className="text-dark mb-0">Admin</h3>
                     </div>
-                    <div className="row">
-                        <div className="col-xl-8 col-md-10 col-sm">  
+                    <div className="row d-flex justify-content-center">
+                        <div className="col-xl-8 col-md-10 col-sm-12">  
+                        <h3>Question existentielles</h3>
                                 <div className="form-group">
-                                    <label for="exampleInputPassword1">Tapez votre question</label>
-                                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Pourquoi le ciel est bleu ?"/>
+                                    <label for="question">Tapez votre question</label>
+                                    <input type="password" className="form-control" id="question" placeholder="Pourquoi le ciel est bleu ?"/>
                                 </div>
                                 <div className="form-group">
-                                <label for="exampleInputEmail1">Tapez votre réponse</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                <label for="réponse">Tapez votre réponse</label>
+                                <input type="email" className="form-control" id="réponse"
                                     placeholder="C'est comme ça"/>
                                 </div>
                         </div>
-                        <div className="col-xl-8 col-md-10 col-sm">
+                        <div className="col-xl-8 col-md-10 col-sm-12">
                             <button type="submit" className="btn btn-danger">Ajouter</button>
                         </div>
                     </div>
