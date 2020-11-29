@@ -16,7 +16,7 @@ function Admin(){
                                             className="fas fa-search"></i></button></div>
                             </div>
                         </form>
-                        <Link to="/Admin"><span>Admin</span></Link>
+                        <Link to="/"><span>Dashboard</span></Link>
                     </div>
                 </nav>
                 <div className="container-fluid">
