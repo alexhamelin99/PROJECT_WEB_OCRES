@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import CreateExercise from './components/Ajouter_Question';
+import CreateUser from './components/Ajouter_User';
 
 function Admin(){
 
@@ -19,29 +21,9 @@ function Admin(){
                         <Link to="/"><span>Dashboard</span></Link>
                     </div>
                 </nav>
-                <div className="container-fluid">
-                    <div className="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 className="text-dark mb-0">Admin</h3>
-                    </div>
-                    <div className="row d-flex justify-content-center">
-                        <div className="col-xl-8 col-md-10 col-sm-12">  
-                        <h3>Question existentielles</h3>
-                                <div className="form-group">
-                                    <label for="question">Tapez votre question</label>
-                                    <input type="text" className="form-control" id="question" placeholder="Pourquoi le ciel est bleu ?"/>
-                                </div>
-                                <div className="form-group">
-                                <label for="réponse">Tapez votre réponse</label>
-                                <input type="text" className="form-control" id="réponse"
-                                    placeholder="C'est comme ça"/>
-                                </div>
-                        </div>
-                        <div className="col-xl-8 col-md-10 col-sm-12">
-                            <button type="submit" className="btn btn-danger">Ajouter</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <CreateUser/>
+                <CreateExercise/>
+        </div>
         </div>
     )
 }export default Admin;

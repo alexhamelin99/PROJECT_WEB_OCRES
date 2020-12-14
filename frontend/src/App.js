@@ -11,7 +11,8 @@ import Admin from './Admin';
 import Navigation from './Navigation';
 import Head from './Head';
 import Dashboard from './Dashboard';
-
+import CreateExercise from './components/Ajouter_Question';
+import EditExercise from './components/Modifier_Question';
 
 
 
@@ -26,6 +27,7 @@ function App() {
                   <Navigation/>                
                   <Route path="/" exact component={Dashboard}/>
                   <Route path="/Admin" exact component={Admin}/>
+                  <Route path="/Admin/:id" component={EditExercise} />
             </Router>
         </div>
   </div>

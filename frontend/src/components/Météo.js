@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const Météo = () => {
     const URL = "https://api.openweathermap.org/data/2.5/weather";
     const API_Key = "4081444b7b90198136fefe6ed4ccf35b";
-    const [query, setQuery] = useState('');
+    const [query, setQuery] = useState('Paris');
     const [weather, setWeather] = useState({});
 
 

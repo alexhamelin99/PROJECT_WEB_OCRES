@@ -6,22 +6,10 @@ import Météo from './components/Météo';
 import Graph from './components/Graph';
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import ExercisesList from './components/Accordion';
 
 
-const items =[
-    {
-    title:'Comment créer un Dashboard',
-    content: 'Il suffit de suivre les cours de Web'
-    },
-    {
-    title: 'Winamax ou Betclic ?',
-    content: 'Ca dépend, je peux avoir un freebet sur Winamax ? ;)'
-    },
-    {
-    title: 'OCRES ou SI',
-    content: 'La question ne se pose même pas'
-    },
-];
+
 
 const options =[
     {
@@ -61,7 +49,7 @@ function Dashboard(){
                        <div className="row">
                            <div className="col-lg-7 col-xl-8">
                                <div className="card shadow mb-4">
-                                   <div className="card-header d-flex justify-content-between align-items-center">Wikipédia</div>
+                                   <div className="card-header d-flex justify-content-between align-items-center">Comparateur des cas confirmé de la covid-19</div>
                                    <div className="card-body">
                                    <Graph/>
                                    </div>
@@ -89,10 +77,10 @@ function Dashboard(){
                            <div className="col-md-12 col-lg-4 col-xl-4 col-sm-12 mb-4">
                            
                                <div className="card shadow border-left-primary py-2">
-                              <h5> Questions existentielles</h5>
+                              <h3> Questions existentielles</h3>
                                    <div className="card-body">
 
-                                   <Accordion items ={items}/>
+                                   <ExercisesList/>
                                    </div>
                                </div>
                            </div>
@@ -112,7 +100,7 @@ function Dashboard(){
                            </div>
                            <div className="col-md-12 col-lg-4 col-xl-4 col-sm-12 mb-4">
                                <div className="card shadow border-left-info py-2">
-                                    <h4>Météo</h4>
+                                    <h3>Météo</h3>
                                    <div className="card-body">
                                            <Météo/>
                                    </div>
